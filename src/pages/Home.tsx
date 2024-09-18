@@ -39,11 +39,11 @@ function Cardcontainer({users}:any):any{
         </div>
     
     <div className="bg-zinc-700 grid grid-cols-3 gap-4">
-        {users.map(user=><Card user={user}></Card>)}
+        {users.map((user:any)=><Card user={user}></Card>)}
     </div>
     </div>
 }   
-function Card({ user }) {
+function Card({ user }:any) {
     const navigate = useNavigate();
 
     return (
