@@ -25,7 +25,7 @@ export default function PostsComponent() {
             <h1 className="text-4xl font-bold text-white">Loading......</h1>
         </div>
     }
-    const userposts = posts.filter(post => post.userId === Number(id));
+    const userposts = posts.filter((post:any)=> post.userId=== Number(id));
 
     return (
         <div className="p-4 bg-zinc-700">
@@ -33,7 +33,7 @@ export default function PostsComponent() {
                 <h1 className="text-4xl font-bold">All posts</h1>
             </div>
 
-            {userposts.map(post => (
+            {userposts.map((post:any) => (
                 <div key={post.id} className="bg-zinc-800 text-white shadow-md rounded-lg p-4 mb-4">
                     <h1 className="text-xl font-bold mb-2">ID: {post.id}</h1>
                     <h1 className="text-xl font-bold mb-2">Title: {post.title}</h1>
